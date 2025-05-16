@@ -91,7 +91,7 @@ function MyFooter(props) {
             </div>
           </Row>
           <Row>
-            <div className="col mb2 my-2 copyright">
+            <div className="col mb2 my-3 copyright">
               © 1997-2023 Netflix, Inc.
             </div>
           </Row>
