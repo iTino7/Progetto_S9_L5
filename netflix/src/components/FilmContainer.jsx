@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Component } from "react";
 import MyTrendingFilm from "./MyTrendingFilm";
 import MyWatchAgain from "./MyWatchAgain";
 import MySeries from "./MySeries";
@@ -9,7 +8,7 @@ class FilmContainer extends Component {
     return (
       <>
         <MyTrendingFilm title="Trending now" />
-        <MyWatchAgain title="Horror" />
+        <MyWatchAgain title="Watch it Again" />
         <MySeries title="Series" />
       </>
     );

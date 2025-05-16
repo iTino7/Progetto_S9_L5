@@ -9,7 +9,7 @@ class MySeries extends Component {
   fetchSeries = async () => {
     try {
       const resp = await fetch(
-        "https://www.omdbapi.com/?s=lost&type=series&apikey=a2ca179f"
+        "https://www.omdbapi.com/?s=batman&type=movie&apikey=a2ca179f"
       );
 
       if (resp.ok) {
@@ -38,9 +38,10 @@ class MySeries extends Component {
                 key={item.imdbID}
                 src={item.Poster}
                 alt={item.Title}
-                width={200}
-                height={300}
-                style={{ objectFit: "contain", cursor: "pointer" }}
+                style={{
+                  cursor: "pointer",
+                  minWidth: "15%",
+                }}
                 className="my-2"
               />
             ))}

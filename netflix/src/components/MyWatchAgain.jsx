@@ -9,7 +9,7 @@ class MyWatchAgain extends Component {
   fetchSeries = async () => {
     try {
       const resp = await fetch(
-        "https://www.omdbapi.com/?s=horror&apikey=a2ca179f"
+        "https://www.omdbapi.com/?s=harry%20potter&type=movie&apikey=a2ca179f"
       );
 
       if (resp.ok) {
@@ -33,14 +33,16 @@ class MyWatchAgain extends Component {
         <h4 className=" px-4 text-white mt-3">{this.props.title}</h4>
         <Container fluid className="pt-2">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4">
-            {this.state.series.slice(0,6).map((item) => (
+            {this.state.series.slice(0, 6).map((item) => (
               <img
                 key={item.imdbID}
                 src={item.Poster}
                 alt={item.Title}
-                width={200}
-                height={300}
-                style={{ objectFit: "contain", cursor: "pointer" }}
+                style={{
+                  
+                  cursor: "pointer",
+                  minWidth: "15%",
+                }}
                 className="my-2"
               />
             ))}
